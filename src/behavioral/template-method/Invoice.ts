@@ -9,6 +9,9 @@ export default class Invoice {
 	}
 
 	addItem (item: Item) {
+		const isSameItem = this.items.find(itemSearch => itemSearch.category===item.category && itemSearch.description===item.description)
+		if  (isSameItem) throw new Error("Unable to insert a duplicate product!");
+		
 		this.items.push(item);
 	}
 
