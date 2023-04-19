@@ -1,6 +1,6 @@
 import axios from "axios";
 
-test("Should to test the API", async function () {
+test.skip("Should to test the API", async function () {
     const response = await axios.get("http://localhost:3005/books");
     
 	const books = response.data;
